@@ -15,9 +15,12 @@ This status platform runs completely decoupled on **GitHub Pages' global CDN**:
 - **Unified 90-Day Timeline**: Slender, elegant 90-day operational timeline with calendar hover tooltips.
 - **Zero Build Step**: Pure HTML5, CSS, and Vanilla JavaScript. No node_modules, no npm build commands, no server runtimes.
 
----
+> [!TIP]
+> **No Forking Required!** You can use this official hosted status page directly for your own OwnMediaHost instance without hosting anything:  
+> `https://nourddinak.github.io/OwnMediaHost-status/?api=https://media.yourdomain.com`  
+> Simply whitelist `https://nourddinak.github.io` on your server (or run `sudo bash /opt/ownmediahost/scripts/connect-status.sh "https://nourddinak.github.io/OwnMediaHost-status/"`).
 
-## 🚀 Quickstart: Fork & Deploy in 60 Seconds
+## 🚀 Quickstart: Fork & Deploy Your Own (Optional)
 
 ### Step 1: Fork or Use as Template
 1. Click **Use this template** or **Fork** at the top right of this repository.
