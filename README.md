@@ -38,7 +38,13 @@ This status platform runs completely decoupled on **GitHub Pages' global CDN**:
 
 The status page can monitor any backend API. You can connect it in 4 flexible ways:
 
-### 1. Preconfigure in `config.json`
+### 1. Automated Script (OwnMediaHost VPS)
+If you are running OwnMediaHost, execute the 1-click status connection tool on your server to automatically configure CORS origins, update environment variables, and run live probe tests:
+```bash
+sudo bash /opt/ownmediahost/scripts/connect-status.sh "https://<your-username>.github.io/OwnMediaHost-status/"
+```
+
+### 2. Preconfigure in `config.json`
 Edit [`config.json`](config.json) in your repository:
 ```json
 {
@@ -49,19 +55,19 @@ Edit [`config.json`](config.json) in your repository:
 }
 ```
 
-### 2. Connect Interactively in the Browser
+### 3. Connect Interactively in the Browser
 1. Open your status page.
 2. Click the **Target** pill in the top navigation bar (or the setup banner).
 3. Paste your backend URL (e.g. `https://api.yourdomain.com`) and click **Test & Connect**.
 4. The target is verified and saved to your browser session.
 
-### 3. URL Query Parameter
+### 4. URL Query Parameter
 Link users directly with your target API specified:
 ```text
 https://yourusername.github.io/status/?api=https://api.yourdomain.com
 ```
 
-### 4. Link from Your Main Application
+### 5. Link from Your Main Application
 In your primary application (settings page, footer, or 502/503 error handlers), provide a direct link to your out-of-band status page:
 ```html
 <a href="https://status.yourdomain.com" target="_blank" rel="noopener">
